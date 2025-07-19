@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>記述演習</title>
+<link rel="stylesheet" href="styles.css" />
+<script src="https://unpkg.com/wanakana"></script>
+</head>
+<body>
+    <h1 id="header">タイトル</h1>
+
+    <div id="startContainer">
+        <button id="startButton" onclick="startQuiz()">問題開始</button>
+    </div>
+
+    <div id="quizContainer" style="display:none;">
+        <div id="questionText"></div>
+        <div id="options">
+            <input type="text" id="userAnswer" placeholder="ここに解答を入力" />
+            <button id="submitBtn" onclick="submitAnswer()">送信</button>
+        </div>
+    </div>
+
+    <div id="resultContainer" style="display:none;">
+        <div id="singleResult"></div>
+        <button id="nextButton" onclick="nextQuestion()">次の問題へ</button>
+    </div>
+
+    <div id="finalResultContainer" style="display:none;">
+        <div id="score"></div>
+        <div id="resultList"></div>
+        <button id="retryButton" onclick="restartQuiz()">もう一度</button>
+    </div>
+
+    <script src="question.js"></script>
+</body>
+</html>
